@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #f7f5f0;
+  --surface: #ffffff;
+  --surface-2: #f1efe9;
+  --ink: #0b1220;
+  --ink-2: #111827;
+  --muted: #64748b;
+  --line: #e2e8f0;
+  --accent: #2563eb;
+  --accent-soft: rgba(37, 99, 235, 0.08);
+  --teal: #0f766e;
+  --teal-soft: rgba(15, 118, 110, 0.08);
+}
+
+.dark {
+  --bg: #080c14;
+  --surface: #111827;
+  --surface-2: #0d1420;
+  --ink: #f8fafc;
+  --ink-2: #e2e8f0;
+  --muted: #94a3b8;
+  --line: rgba(148, 163, 184, 0.16);
+  --accent: #5b8def;
+  --accent-soft: rgba(91, 141, 239, 0.12);
+  --teal: #2dd4bf;
+  --teal-soft: rgba(45, 212, 191, 0.1);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-teal: var(--teal);
+  --color-teal-soft: var(--teal-soft);
+  --font-display: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Visible keyboard focus */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--ink);
+  color: var(--bg);
+  padding: 0.75rem 1.25rem;
+  font-size: 0.875rem;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* Eyebrow label */
+.eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Hero orbital scene — pure CSS 3D, GPU-light */
+.orbit-scene {
+  perspective: 1000px;
+}
+.orbit-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  border: 1px solid var(--line);
+  transform-style: preserve-3d;
+}
+.orbit-ring--a {
+  animation: orbit-a 36s linear infinite;
+  border-color: color-mix(in srgb, var(--accent) 35%, transparent);
+}
+.orbit-ring--b {
+  animation: orbit-b 48s linear infinite;
+  border-color: color-mix(in srgb, var(--teal) 35%, transparent);
+}
+.orbit-ring--c {
+  animation: orbit-c 60s linear infinite;
+}
+.orbit-node {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: var(--accent);
+  box-shadow: 0 0 18px color-mix(in srgb, var(--accent) 60%, transparent);
+}
+.orbit-node--teal {
+  background: var(--teal);
+  box-shadow: 0 0 18px color-mix(in srgb, var(--teal) 60%, transparent);
+}
+@keyframes orbit-a {
+  from { transform: rotateX(64deg) rotateZ(0deg); }
+  to { transform: rotateX(64deg) rotateZ(360deg); }
+}
+@keyframes orbit-b {
+  from { transform: rotateX(70deg) rotateY(-12deg) rotateZ(360deg); }
+  to { transform: rotateX(70deg) rotateY(-12deg) rotateZ(0deg); }
+}
+@keyframes orbit-c {
+  from { transform: rotateX(56deg) rotateY(18deg) rotateZ(0deg); }
+  to { transform: rotateX(56deg) rotateY(18deg) rotateZ(360deg); }
+}
+.float-slow {
+  animation: float-slow 9s ease-in-out infinite;
+}
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+/* Reduced motion: freeze everything */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
