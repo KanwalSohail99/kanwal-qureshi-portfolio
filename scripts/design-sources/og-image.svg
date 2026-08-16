@@ -1,0 +1,45 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="wash" cx="78%" cy="8%" r="70%">
+      <stop offset="0%" stop-color="#1d3a7a" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0b1220" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#0d1420"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#base)"/>
+  <rect width="1200" height="630" fill="url(#wash)"/>
+
+  <!-- quiet orbital rings, decorative -->
+  <g opacity="0.5" stroke="#2563EB" fill="none">
+    <ellipse cx="960" cy="150" rx="260" ry="90" stroke-opacity="0.35" stroke-width="1"/>
+    <ellipse cx="960" cy="150" rx="180" ry="180" stroke-opacity="0.22" stroke-width="1"/>
+  </g>
+  <g opacity="0.5" stroke="#0F766E" fill="none">
+    <ellipse cx="960" cy="150" rx="330" ry="130" stroke-opacity="0.25" stroke-width="1"/>
+  </g>
+  <circle cx="1090" cy="95" r="4.5" fill="#2563EB"/>
+  <circle cx="820" cy="205" r="3.5" fill="#0F766E"/>
+
+  <!-- K monogram mark -->
+  <rect x="78" y="78" width="112" height="112" rx="24" fill="#141d2e"/>
+  <path d="M108 108v52h11v-52h-11Z" fill="#F7F5F0"/>
+  <path d="M164 108h-13l-18 24.9v5.2L171 190h13l-25-38.2L164 108Z" fill="#F7F5F0"/>
+  <circle cx="124" cy="151" r="5.6" fill="#2563EB"/>
+
+  <text x="78" y="330" font-family="Georgia, 'Playfair Display', serif" font-size="72" fill="#F8FAFC" letter-spacing="0.5">KANWAL SOHAIL</text>
+
+  <text x="80" y="384" font-family="Arial, sans-serif" font-size="26" letter-spacing="3" fill="#5B8DEF">BANKING</text>
+  <text x="248" y="384" font-family="Arial, sans-serif" font-size="26" fill="#64748B">·</text>
+  <text x="266" y="384" font-family="Arial, sans-serif" font-size="26" letter-spacing="3" fill="#2DD4BF">BIOCHEMISTRY</text>
+  <text x="522" y="384" font-family="Arial, sans-serif" font-size="26" fill="#64748B">·</text>
+  <text x="540" y="384" font-family="Arial, sans-serif" font-size="26" letter-spacing="3" fill="#5B8DEF">TECHNOLOGY</text>
+
+  <line x1="80" y1="430" x2="420" y2="430" stroke="#243044" stroke-width="1"/>
+
+  <text x="80" y="480" font-family="Georgia, serif" font-style="italic" font-size="24" fill="#94A3B8">Scientific thinking. Business experience.</text>
+  <text x="80" y="514" font-family="Georgia, serif" font-style="italic" font-size="24" fill="#94A3B8">Technology-driven curiosity.</text>
+</svg>
