@@ -55,6 +55,12 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+   verification: {
+    google: "q8GHWeKEyALae5Pt5ShJaaGbsABeSGbrIiSoAMKVc5o
+  },
+  robots: { index: true, follow: true },
+};
+
 export const viewport = {
   width: "device-width",
   initialScale: 1,
