@@ -20,6 +20,7 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -34,7 +35,14 @@ export const metadata: Metadata = {
     siteName: "Kanwal Sohail",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Kanwal Sohail — Banking · Biochemistry · Technology" }],
+    images: [
+      {
+        url: OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: "Kanwal Sohail — Banking · Biochemistry · Technology",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -52,12 +60,12 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
   manifest: "/manifest.webmanifest",
-  robots: { index: true, follow: true },
-};
 
-   verification: {
-    google: "q8GHWeKEyALae5Pt5ShJaaGbsABeSGbrIiSoAMKVc5o
+  // Google Search Console verification
+  verification: {
+    google: "q8GHWeKEyALae5Pt5ShJaaGbsABeSGbrIiSoAMKVc5o",
   },
+
   robots: { index: true, follow: true },
 };
 
